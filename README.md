@@ -1,3 +1,3 @@
 # java-web-app
 
-This project uses github actions
+This java project uses github actions
