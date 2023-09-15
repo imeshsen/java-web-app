@@ -1,16 +1,15 @@
 on:
+  # Trigger analysis when pushing in master or pull requests, and when creating
+  # a pull request. 
   push:
     branches:
-      - main
+      - ma
   pull_request:
-    types: [opened, synchronize, reopened]
-
+      types: [opened, synchronize, reopened]
 name: Main Workflow
-
 jobs:
-  sonarqube:
+  sonarquinbe:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v3
       with:
@@ -35,8 +34,8 @@ jobs:
       # Force to fail step after specific time.
       timeout-minutes: 5
       env:
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }} # OPTIONAL
+       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+       SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }} #OPTIONAL
 
     # Optionally you can use the output from the Quality Gate in another step.
     # The possible outputs of the `quality-gate-status` variable are `PASSED`, `WARN` or `FAILED`.
