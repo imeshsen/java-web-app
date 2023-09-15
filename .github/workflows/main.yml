@@ -26,7 +26,7 @@ jobs:
       with:
         # Set the sonar.projectKey property
         args: >
-          -Dsonar.projectKey=<YOUR_PROJECT_KEY>
+          -Dsonar.projectKey=sonar action
 
     # Check the Quality Gate status.
     - name: SonarQube Quality Gate check
