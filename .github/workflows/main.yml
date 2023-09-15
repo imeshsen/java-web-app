@@ -16,11 +16,6 @@ jobs:
         with:
           fetch-depth: 0  # Disable shallow clones
 
-      - name: Set up JDK 17
-        uses: actions/setup-java@v2
-        with:
-          java-version: 17
-
       - name: Cache Maven packages
         uses: actions/cache@v2
         with:
