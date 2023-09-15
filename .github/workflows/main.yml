@@ -27,7 +27,7 @@ jobs:
           -Dsonar.projectKey=sonar-action
 
     - name: SonarQube Quality Gate
-      uses: sonarsource/sonarqube-quality-gate-action@v2
+      uses: sonarsource/sonarqube-quality-gate-action@master
       env:
         SONAR_TOKEN: ${{ secrets.SONARQUBE_TOKEN }}
       with:
