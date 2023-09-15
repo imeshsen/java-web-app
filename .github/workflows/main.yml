@@ -3,7 +3,7 @@ on:
   # a pull request. 
   push:
     branches:
-      - main
+      - mai
   pull_request:
       types: [opened, synchronize, reopened]
 name: Main Workflow
@@ -22,10 +22,7 @@ jobs:
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-      with:
-        # Set the sonar.projectKey property
-        args: >
-          -Dsonar.projectKey=sonar action
+        SONAR_PROJECT_KEY: ${{ secrets.SONAR_PROJECT_KEY }}
 
     # Check the Quality Gate status.
     - name: SonarQube Quality Gate check
